@@ -1,0 +1,11 @@
+$font-url: 'fonts/';
+
+@include rb-font-face( 'SansBold',       'AkzidenzGrotesk-Bold',     $font-url, 700, normal );
+@include rb-font-face( 'SansRegular',    'AkzidenzGrotesk-medium',  $font-url, 400, normal );
+@include rb-font-face( 'AltBold',        'gotham-bold',              $font-url, 700, normal );
+@include rb-font-face( 'AltRegular',     'gotham-book.eot',          $font-url, 400, normal );
+
+$ff-sans-bold:      SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ff-sans-regular:   SansRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ff-alt-bold:       AltBold, 'SansBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ff-alt-regular:    AltRegular, 'SansRegular', 'Helvetica Neue', Helvetica, Arial, sans-serif;

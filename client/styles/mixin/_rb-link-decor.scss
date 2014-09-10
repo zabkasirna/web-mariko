@@ -1,0 +1,15 @@
+@mixin link-decor {
+    @include transition(background-image .3s ease-out);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0, 0, 0, 0)),to($red));
+    background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,$red 50%);
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$red 50%);
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    background-position: 0 90%;
+
+    &:hover {
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#AAA));
+        background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%, #AAA 50%);
+        background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%, #AAA 50%);
+    }
+}

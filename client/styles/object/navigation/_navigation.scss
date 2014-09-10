@@ -1,0 +1,133 @@
+#navigations {
+    @include mq(min-width $nav-save-width) {
+        height: x(3);
+        padding: x(1.5) 0 0 0;
+    }
+    @include mq(max-width $nav-save-width - 1) {
+        float: right;
+    }
+    @include clearfix;
+
+    #navigation-toggle {
+        z-index: 2000;
+        &:hover { cursor: pointer; }
+        &:active, &:visited { color: $black; }
+        @include mq(min-width $nav-save-width) { display: none; }
+        @include mq(max-width $nav-save-width - 1) {
+            display: block;
+            float: right;
+            width: x(1);
+            height: x(1);
+            line-height: x(1);
+            text-align: right;
+            margin: x(1) x(1) 0 0;
+        }
+    }
+
+    .navigation {
+        z-index: 1000;
+        @include clearfix;
+        @include mq(min-width $nav-save-width) {
+            width: 50%;
+            margin: 0 auto;
+            height: x(1);
+            float: none;
+        }
+        @include mq(max-width $nav-save-width - 1) {
+            width: auto;
+            padding: x(1) 0;
+            float: right;
+            // margin: x(1) x(-2) 0 0;
+            margin: 0;
+        }
+    }
+
+    .navigation-list {
+        display: block;
+        position: relative;
+        height: x(1);
+        line-height: x(1);
+        overflow: hidden;
+        @include mq(min-width $nav-save-width) {
+            width: 25%;
+            float: left;
+            text-align: center;
+        }
+        @include mq(max-width $nav-save-width - 1) {
+            width: auto;
+            float: none;
+            text-align: right;
+            padding: 0 x(.5);
+        }
+    }
+
+    .navigation-link {
+        @include transition(border-bottom .3s ease-out);
+        @include transition(top .5s ease-out);
+        @include mq(max-width $nav-save-width - 1) { top: x(1); }
+        position: relative;
+        color: $black;
+        font-size: r(.75rem);
+        line-height: x(1);
+        border-bottom: 2px solid rgba($red, 0);
+        margin: 0;
+        text-align: center;
+        text-transform: uppercase;
+        &:hover, &:active, &:focus {
+            color: $black;
+            text-decoration: none;
+            outline: transparent none 0;
+            border-bottom: 2px solid rgba($red, 1);
+        }
+    }
+}
+
+#navigations.open {
+    .navigation-link {
+        @include mq(max-width $nav-save-width - 1) {
+            top: 0;
+        }
+    }
+}
+
+
+#headers .socials {
+    @include mq(min-width $nav-save-width) {
+        top: x(1);
+        right: x(1);
+    }
+
+    @include mq(max-width ($nav-save-width - 1)) {
+        left: x(1);
+        top: x(3);
+    }
+
+    @include clearfix;
+    position: absolute;
+
+    li {
+        text-align: left;
+        padding-left: 4px;
+
+        @include mq(max-width $nav-save-width) {
+            height: x(.5);
+            width: x(2);
+            margin: 0 x(.5) 12px x(.5);
+        }
+
+        @include mq(max-width ($nav-save-width - 1)) {
+            width: x(1);
+            height: x(1);
+            line-height: x(1);
+            float: left;
+            margin: 0;
+        }
+    }
+
+    a {
+        font-size: 12px;
+        height: x(.5);
+        line-height: x(.5);
+        margin: 0;
+    }
+}

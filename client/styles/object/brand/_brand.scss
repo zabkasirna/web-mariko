@@ -1,0 +1,18 @@
+#brands {
+    @include clearfix;
+    position: relative;
+    @include mq(min-width $nav-save-width) { width: x(6); }
+    @include mq(max-width $nav-save-width - 1) { width: x(4); }
+    height: x(3);
+    padding: x(1) 0 0 0;
+    margin: 0 x(1);
+
+    float: left;
+
+    .brand-svg {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}

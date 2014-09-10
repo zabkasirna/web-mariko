@@ -1,0 +1,22 @@
+#backgrounds {
+    @include stretch;
+    overflow: hidden;
+    z-index: -1000;
+    width: 100%;
+
+    img.background-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+
+        &.full-width { height: 100%; }
+        &.full-height { width: 100%; }
+    }
+
+    div.background-image {
+        @include stretch;
+        background:transparent url('../assets/images/background/home-bg.jpg') center center no-repeat;
+        background-size: contain;
+    }
+}
