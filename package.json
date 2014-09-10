@@ -1,0 +1,10 @@
+{
+  "name": "mariko",
+  "version": "0.0.1",
+  "description": "Mariko website",
+  "keywords": [
+    "mariko"
+  ],
+  "author": "sirna",
+  "license": "MIT"
+}

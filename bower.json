@@ -1,0 +1,26 @@
+{
+  "name": "mariko",
+  "version": "0.0.1",
+  "authors": [
+    "sirna"
+  ],
+  "description": "Mariko website",
+  "moduleType": [
+    "es6",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "mariko"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ]
+}
